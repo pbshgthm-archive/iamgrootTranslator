@@ -1,0 +1,148 @@
+
+html,body{
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+}
+
+#groot-img{
+	position: absolute;
+	width: 40vw;
+	right: 0vw;
+	bottom: 0vh;
+
+}
+
+#title{
+	font-size: 3vw;
+	position: absolute;
+	top: 3vh;
+	left: 20vw;
+
+}
+
+#quote{
+	position: absolute;
+	font-size: 1.2vw;
+	width: 33vw;
+	top: 12vh;
+	left:12vw;
+}
+
+#q-credit{
+	float: right;
+	padding-right: 1vw;
+}
+#q-place{
+	float: right;
+	padding-right: 1vw;
+}
+
+#desc{
+	position: absolute;
+	font-size: 1.2vw;
+	width: 43vw;
+	top: 32vh;
+	left:8vw;
+}
+
+#eng-inp{
+	padding: 1vw;
+	font-size: 1.2vw;
+	position: absolute;
+	width: 38vw;
+	top: 45vh;
+	left:8vw;
+	padding-right: 3vw;
+}
+#eng-trans{
+	font-size: 2.2vw;
+	position: absolute;
+	top: 46vh;
+	left:47.5vw;
+	color: #CFD8DC;
+	cursor: pointer;
+}
+#eng-trans:hover{
+	color: #004D40;
+}
+
+#groot-res{
+	position: absolute;
+	font-size: 1.7vw;
+	width: 30vw;
+	top: 55vh;
+	left:12vw;
+	text-align: center;
+}
+#copy-groot{
+	position: absolute;
+	font-size: 1vw;
+	background-color: #CFD8DC;
+	padding-top: 0.3vw;
+	padding-bottom: 0.3vw;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+	top: 55vh;
+	left:45vw;
+	cursor: pointer;
+	user-select:none;
+}
+#copy-groot:hover{
+	background-color: #B0BEC5;
+}
+
+#groot-inp{
+	padding: 1vw;
+	font-size: 1.2vw;
+	position: absolute;
+	width: 38vw;
+	top: 70vh;
+	left:8vw;
+	padding-right: 3vw;
+}
+#groot-trans{
+	font-size: 2.2vw;
+	position: absolute;
+	top: 71vh;
+	left:47.5vw;
+	color: #CFD8DC;
+	cursor: pointer;
+}
+#groot-trans:hover{
+	color: #004D40;
+}
+#eng-res{
+	position: absolute;
+	font-size: 1.7vw;
+	width: 30vw;
+	top: 80vh;
+	left:12vw;
+	text-align: center;
+}
+#copy-eng{
+	position: absolute;
+	font-size: 1vw;
+	background-color: #CFD8DC;
+	padding-top: 0.3vw;
+	padding-bottom: 0.3vw;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+	top: 80vh;
+	left:45vw;
+	cursor: pointer;
+	user-select:none;
+}
+#copy-eng:hover{
+	background-color: #B0BEC5;
+}
+
+#eng-out{
+	display: none;
+}
+#groot-out{
+	display: none;
+}

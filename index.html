@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I am Groot</title>
+	<script type="text/javascript" src="assets/grootLang.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/desktop.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="title">Groot translator</div>
+<div id="quote">
+	<div id="q-text">"His vocabulistics is limited to 'I' and 'am' and 'Groot.' Exclusively, in that order."</div>
+	<div id="q-credit">Rocket Raccoon</div><br/>
+	<div id="q-place"><i>Kyln, 2014</i></div>
+</div>
+<div id="desc">
+	Groot translator, translates English to Groot. Type the sentence in the box below. Copy the translated Groot sentence. Share it through any means. To translate Groot to english, paste the groot sentence, in the lower box.
+</div>
+
+<input type="text" id="eng-inp" maxlength="70" placeholder="Translate to Groot" >
+<div id="eng-trans">&#10003;</div>
+
+<div id="groot-out">
+	<div id="groot-res"></div>
+	<div id="copy-groot">Copy text</div>
+</div>
+
+<input type="text" id="groot-inp" placeholder="Translate to English" >
+<div id="groot-trans">&#10003;</div>
+
+<div id="eng-out">
+	<div id="eng-res"></div>
+	<div id="copy-eng">Copy text</div>
+</div>
+
+<img src="assets/img/groot.jpeg" id="groot-img">
+
+</body>
+
+<script type="text/javascript">
+
+$("#eng-inp").keypress(function(event) {
+    if (event.which == 13) {
+    	toGroot();
+     }
+});
+
+$("#groot-inp").keypress(function(event) {
+    if (event.which == 13) {
+    	toEnglish();
+     }
+});
+
+$('#copy-eng').bind('click',function(){
+	var _txt=$("#eng-res").text();
+	copyText(_txt);
+});
+
+$('#copy-groot').bind('click',function(){
+	var _txt=$("#groot-res").text();
+	copyText(_txt);
+});
+
+
+$('#groot-trans').bind('click',function(){
+	toEnglish();
+});
+
+$('#eng-trans').bind('click',function(){
+	toGroot();
+});
+
+function toGroot(){
+	var eng_txt=$("#eng-inp").val();
+	var groot=GrootLang.toGroot(eng_txt);
+	console.log(groot);
+	$("#groot-out").fadeIn();
+	$("#groot-res").text(groot);
+}
+
+function toEnglish(){
+	var groot_txt=$("#groot-inp").val();
+	var eng=GrootLang.toEnglish(groot_txt);
+	$("#eng-out").fadeIn();
+	$("#eng-res").text(eng);
+}
+
+function copyText(txt) {
+		var $temp = $("<input>");
+  		$("body").append($temp);
+  		$temp.val(txt).select();
+  		document.execCommand("copy");
+  		$temp.remove();
+}
+
+
+</script>
+</html>
