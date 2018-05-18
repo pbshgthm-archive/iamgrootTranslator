@@ -2,10 +2,8 @@
 <html>
 <head>
 	<title>I am Groot</title>
-	<script type="text/javascript" src="assets/grootLang.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/desktop.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
 </head>
 <body>
 
@@ -36,65 +34,6 @@
 </div>
 
 <img src="assets/img/groot.jpeg" id="groot-img">
-
+<script type="text/javascript" src="assets/grootLang.js"></script>
 </body>
-
-<script type="text/javascript">
-
-$("#eng-inp").keypress(function(event) {
-    if (event.which == 13) {
-    	toGroot();
-     }
-});
-
-$("#groot-inp").keypress(function(event) {
-    if (event.which == 13) {
-    	toEnglish();
-     }
-});
-
-$('#copy-eng').bind('click',function(){
-	var _txt=$("#eng-res").text();
-	copyText(_txt);
-});
-
-$('#copy-groot').bind('click',function(){
-	var _txt=$("#groot-res").text();
-	copyText(_txt);
-});
-
-
-$('#groot-trans').bind('click',function(){
-	toEnglish();
-});
-
-$('#eng-trans').bind('click',function(){
-	toGroot();
-});
-
-function toGroot(){
-	var eng_txt=$("#eng-inp").val();
-	var groot=GrootLang.toGroot(eng_txt);
-	console.log(groot);
-	$("#groot-out").fadeIn();
-	$("#groot-res").text(groot);
-}
-
-function toEnglish(){
-	var groot_txt=$("#groot-inp").val();
-	var eng=GrootLang.toEnglish(groot_txt);
-	$("#eng-out").fadeIn();
-	$("#eng-res").text(eng);
-}
-
-function copyText(txt) {
-		var $temp = $("<input>");
-  		$("body").append($temp);
-  		$temp.val(txt).select();
-  		document.execCommand("copy");
-  		$temp.remove();
-}
-
-
-</script>
 </html>
